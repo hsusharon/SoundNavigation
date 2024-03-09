@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SoundNavigation.Pages.InfoPage">
+
+    <ContentPage.Resources>
+        <Style TargetType="Label" x:Key="H1">
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="TextColor" Value="lightblue"/>
+            <Setter Property="FontFamily" Value="OpenSansRegular" />
+        </Style>
+        <Style TargetType="Label" x:Key="H2">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="TextColor" Value="Orange"/>
+            <Setter Property="FontFamily" Value="OpenSansRegular" />
+            <Setter Property="Margin" Value="50,10,10,10" />
+        </Style>
+    </ContentPage.Resources>
+    
+    <VerticalStackLayout Margin="10">
+        <Grid>
+            <Grid VerticalOptions="Start">
+                <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                    <Label Text="Welcome " 
+                           Margin="0,0,5,0" 
+                           Style="{StaticResource H1}"/>
+                    <Label Text="{Binding UserName}" 
+                           Margin="0,0,5,0"
+                           Style="{StaticResource H1}"/>
+                    <Label Text="to Sound Navigation App" 
+                           Style="{StaticResource H1}"/>
+                </HorizontalStackLayout>
+            </Grid>
+        </Grid>
+        <Grid VerticalOptions="Start">
+            <Label Text="How to use"
+                   Style="{StaticResource H2}"></Label>
+        </Grid>
+        <Grid>
+            <Label>
+                
+            </Label>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

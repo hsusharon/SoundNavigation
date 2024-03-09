@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SoundNavigation.Pages.LoginPage">
+
+    <Grid BackgroundColor="Transparent">
+        <Image Source="audio.gif" Aspect="AspectFill" />
+        <Grid VerticalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+
+            <Grid Grid.Row="1">
+                <StackLayout HorizontalOptions="Center">
+                    <Label Text="Welcome to Noise Cancellation App" Style="{StaticResource TitleStyle1}"/>
+                    <Label Margin="10" Text="Please enter username" Style="{StaticResource TitleStyle2}"/>
+                    <Grid Margin="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="5*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height=" *" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Row=" 0" Grid.Column =" 0" Text=" User Name:" HorizontalOptions="End" Style="{StaticResource NormalText}" Margin="8"></Label>
+                        <Entry Grid.Row="0" Grid.Column="1" 
+                               Placeholder="Name" 
+                               Text="{Binding UserName}" 
+                               Margin="8"/>
+                    </Grid>
+                    <Button Text="Start" Command="{Binding LoginBtn}" Margin="30,15,30,15" />
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </Grid>
+
+</ContentPage>

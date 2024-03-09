@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="SoundNavigation.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SoundNavigation"
+    xmlns:pages ="clr-namespace:SoundNavigation.Pages"
+    Shell.FlyoutBehavior="Flyout"
+    Title="SoundNavigation">
+
+    <ShellContent
+        ContentTemplate="{DataTemplate pages:LoadingPage}"
+        Route="LoadingPage" 
+        Shell.FlyoutBehavior="Disabled"
+        Shell.FlyoutItemIsVisible="False"/>
+
+    <ShellContent
+        ContentTemplate="{DataTemplate pages:LoginPage}"
+        Route="LoginPage" 
+        Shell.FlyoutBehavior="Disabled"
+        Shell.FlyoutItemIsVisible="False"/>
+
+    <ShellContent
+        Title="Get Started"
+        ContentTemplate="{DataTemplate pages:InfoPage}"
+        Route="InfoPage" />
+
+    <ShellContent 
+        Title="Navigator"
+        ContentTemplate="{DataTemplate pages:NavigatorPage}"
+        Route="NavigatorPage" />
+
+    <ShellContent
+        Title="Profile"
+        ContentTemplate="{DataTemplate pages:ProfilePage}"
+        Route="ProfilePage" />
+
+    <ShellContent
+        Title="Settings"
+        ContentTemplate="{DataTemplate pages:SettingsPage}"
+        Route="SettingsPage" />
+
+    <Shell.FlyoutFooterTemplate>
+        <DataTemplate>
+            <StackLayout>
+                <Button 
+                    Text="Log Out" 
+                    Clicked="LogOutClicked" 
+                    Margin="10"/>
+            </StackLayout>
+        </DataTemplate>
+    </Shell.FlyoutFooterTemplate>
+
+
+
+</Shell>
